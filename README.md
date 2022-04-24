@@ -46,9 +46,14 @@ Whose fields have the following meaning:
 
 ## NFT IDs
 
-The SHA-256 hash of the signature of an NFT serves as a compact identifier of
-a given NFT. This NFT ID can be used to look up the signature and metadata of
-an NFT.
+The SHA-256 hash of the signature of an NFT, encoded using bech32 with the
+`nft` prefix serves as a compact identifier of a given NFT. For example
+
+```
+nft1zkq28upa9vkd2dlve4lc2cxwnsysu3ff4
+```
+
+This NFT ID can be used to look up the signature and metadata of an NFT.
 
 Looking up the metadata of an NFT ID is trustless, since NFT ID commits to the
 signature, and the signature commits to the metadata, so NFT metadata can be
